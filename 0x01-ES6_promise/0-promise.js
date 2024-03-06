@@ -1,10 +1,10 @@
-function getResponseFromAPI() {
+export default function getResponseFromAPI() {
   return new Promise((resolve, reject) => {
-    // Simulating an API call with a setTimeout
-    setTimeout(() => {
-      resolve("Response from API");
-    }, 1000);
+    const success = true;
+    if (success) {
+      resolve('success');
+    } else {
+      reject(new Error('failed'));
+    }
   });
 }
-
-export default getResponseFromAPI;
